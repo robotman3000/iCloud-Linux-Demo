@@ -1,8 +1,8 @@
 package icloud.gui.notes;
 
-import icloud.services.notes.Attachment;
-import icloud.services.notes.Note;
 import icloud.services.notes.NoteManager;
+import icloud.services.notes.objects.Attachment;
+import icloud.services.notes.objects.Note;
 import icloud.user.UserSession;
 import common.CommonLogic;
 import java.text.SimpleDateFormat;

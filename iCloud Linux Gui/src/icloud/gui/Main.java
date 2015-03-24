@@ -4,12 +4,7 @@ import icloud.gui.notes.NoteEditor;
 import icloud.services.account.AccountManager;
 import icloud.user.UserSession;
 
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
-import javax.swing.JInternalFrame;
-import javax.swing.JDesktopPane;
-import javax.swing.JTabbedPane;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -49,6 +44,11 @@ public class Main {
 		frame.getContentPane().setLayout(null);
 
 		JButton btnAccount = new JButton("Account");
+		btnAccount.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				showUserDetails();
+			}
+		});
 		btnAccount.setBounds(12, 12, 117, 25);
 		frame.getContentPane().add(btnAccount);
 
@@ -82,6 +82,11 @@ public class Main {
 		});
 		btnSignIn.setBounds(141, 12, 117, 25);
 		frame.getContentPane().add(btnSignIn);
+	}
+
+	protected void showUserDetails() {
+		
+		
 	}
 
 	protected void loadNotes() {
