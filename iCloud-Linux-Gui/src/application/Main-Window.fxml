@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Session">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onCreateSession" text="New Session" />
+                  <MenuItem mnemonicParsing="false" onAction="#onDeleteSession" text="Delete Session" />
+                  <MenuItem mnemonicParsing="false" onAction="#onSaveSession" text="Save Session" />
+                  <MenuItem mnemonicParsing="false" onAction="#onLoadSession" text="Load Session" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <SplitPane dividerPositions="0.23942093541202672" prefHeight="160.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ListView fx:id="sessionListView" editable="true" onDragDropped="#sessionListItemDropped" onEditCancel="#sessionListEditCancel" onEditCommit="#sessionListEditCommit" onEditStart="#sessionListEditStart" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="458.0" prefWidth="370.0">
+               <children>
+                  <TabPane fx:id="sessionTabPane" layoutX="39.0" layoutY="68.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <tabs>
+                      <Tab text="Properties">
+                           <content>
+                              <SplitPane dividerPositions="0.26222222222222225" prefHeight="200.0" prefWidth="160.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <TreeView fx:id="sessionPropertiesTreeGui" layoutX="7.0" layoutY="154.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <WebView fx:id="sessionPropertyViewGui" layoutX="36.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <HBox alignment="BOTTOM_LEFT">
+         <children>
+            <Label fx:id="programStatusLabel" text="Program Status">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Pane minWidth="0.0" prefHeight="19.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+            <ProgressBar fx:id="programStatusBar" prefWidth="200.0" progress="0.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </ProgressBar>
+         </children>
+      </HBox>
+   </children>
+</VBox>
