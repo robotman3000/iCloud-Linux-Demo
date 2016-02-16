@@ -3,13 +3,15 @@
  */
 package icloud.gui.notes;
 
-import icloud.services.notes.NoteManager;
-import icloud.user.UserSession;
+import io.github.robotman3000.cloudnix.services.notes.NoteManager;
+import io.github.robotman3000.cloudnix.user.UserSession;
+
 import java.awt.Component;
 import java.awt.Container;
 import java.awt.Image;
 import java.awt.LayoutManager;
 import java.awt.image.BufferedImage;
+
 import javax.swing.GroupLayout;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;

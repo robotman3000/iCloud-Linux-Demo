@@ -1,10 +1,11 @@
 package icloud.gui.notes;
 
-import icloud.services.notes.NoteManager;
-import icloud.services.notes.objects.Attachment;
-import icloud.services.notes.objects.Note;
-import icloud.user.UserSession;
+import io.github.robotman3000.cloudnix.services.notes.NoteManager;
+import io.github.robotman3000.cloudnix.services.notes.objects.Attachment;
+import io.github.robotman3000.cloudnix.services.notes.objects.Note;
+import io.github.robotman3000.cloudnix.user.UserSession;
 import common.CommonLogic;
+
 import java.text.SimpleDateFormat;
 
 import javax.swing.DefaultListModel;
@@ -16,6 +17,7 @@ import javax.swing.JPanel;
 import javax.swing.JEditorPane;
 import javax.swing.JDesktopPane;
 import javax.swing.JInternalFrame;
+
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Set;
@@ -24,16 +26,20 @@ import javax.swing.ListSelectionModel;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
+
 import javax.swing.event.ListSelectionListener;
 import javax.swing.event.ListSelectionEvent;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.image.BufferedImage;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeEvent;
+
 import javax.swing.JTabbedPane;
 import javax.swing.JLabel;
 import javax.swing.JTextArea;
